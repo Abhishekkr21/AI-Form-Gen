@@ -446,7 +446,7 @@ function CreateFormModal({ onClose, onFormCreated }: {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
-                  Form Title (optional)
+                  Form Title
                 </label>
                 <input
                   id="title"
@@ -460,7 +460,7 @@ function CreateFormModal({ onClose, onFormCreated }: {
 
               <div>
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
-                  Description (optional)
+                  Description
                 </label>
                 <input
                   id="description"
