@@ -7,16 +7,19 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:5000/api/:path*',
+        destination:
+          process.env.NODE_ENV === 'development'
+            ? 'http://localhost:5000/api/:path*'
+            : 'https://ai-form-generator-d0nr.onrender.com/api/:path*',
       },
     ];
   },
   typescript: {
-    // ✅ Allow production builds to succeed even with type errors
+    // ✅ Let build succeed even with type errors
     ignoreBuildErrors: true,
   },
   eslint: {
-    // ✅ Allow builds to pass even if ESLint has errors
+    // ✅ Let build succeed even with lint errors
     ignoreDuringBuilds: true,
   },
 };
